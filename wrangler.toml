@@ -1,7 +1,18 @@
-name = "Solaramy-worker-site" 
+# 文件名: wrangler.toml
+
+# 1. 修复名称：必须是小写字母和破折号
+name = "solaramy-worker-site" 
+
+# 2. 核心 Worker 脚本入口：使用顶级的 main 字段
+#    它告诉 Wrangler 从 functions 目录开始构建 Worker 脚本。
 main = "functions/_worker.js" 
+
+# 3. 兼容性日期
 compatibility_date = "2025-11-26" 
 
+# 4. 仅保留 site.bucket，用于部署静态文件
 [site]
-bucket = "."
-entry-point = "functions"
+# 部署根目录下的静态文件
+bucket = "."               
+
+# 删除了 site.entry-point 字段，避免和 main 字段冲突
