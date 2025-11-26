@@ -1,0 +1,10 @@
+# 文件名: wrangler.toml
+
+name = "Solaramy-worker-site" 
+main = "functions/_worker.js" 
+
+compatibility_date = "2025-11-26" 
+
+[site]
+bucket = "."               # 部署根目录下的静态文件
+entry-point = "functions"  # 告诉 Wrangler 扫描 functions 目录作为 Worker 脚本的入口
