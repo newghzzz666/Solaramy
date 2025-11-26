@@ -4,7 +4,7 @@
   "description": "Cloudflare Worker Site deployment for Solaramy.",
   "private": true,
   "scripts": {
-    "build": "npx tsc", <--- 添加这一行
+    "build": "npx tsc", 
     "start": "wrangler dev",
     "deploy": "wrangler deploy"
   },
